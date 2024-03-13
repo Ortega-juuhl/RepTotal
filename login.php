@@ -12,7 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $password = $_POST['password'];
 
     // Create a SQL query to retrieve user details based on the provided username
-    $sql = "SELECT user_id, email, password FROM users WHERE username = '$username'";
+    $sql = "SELECT userID, username, password FROM users WHERE username = '$username'";
     
     // Execute the SQL query
     $result = $conn->query($sql);
@@ -25,8 +25,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Verify if the provided password matches the hashed password in the database
         if (password_verify($password, $row['password'])) {
             // Set session variables upon successful login
-            $_SESSION['userid'] = $row['user_id']; // Store the user ID in the session
-            $_SESSION['email'] = $row['email']; // Store the email in the session
+            $_SESSION['userID'] = $row['userID']; // Store the user ID in the session
+            $_SESSION['username'] = $row['username']; // Store the email in the session
             
             // Redirect the user to the index.php page (or any desired page after successful login)
             header('Location: index.php');

@@ -12,7 +12,6 @@ session_start()
 </head>
 <body>  
     
-
 <div class="tab">
     <a href="index.php"><button><i class="fa-solid fa-house"></i> Home</button></a>
     <button class="tablinks" onclick="openTab(event, 'change_password')">1</button>
@@ -61,7 +60,6 @@ session_start()
             <div class="faq-question" onclick="toggleFAQ('faq5')">How do I delete my account?</div>
             <div id="faq5" class="faq-answer">It is a long established fact that a reader will be...</div>
         </li>
-
         <li>
             <div class="faq-question" onclick="toggleFAQ('faq5')">How do I delete my message?</div>
             <div id="faq5" class="faq-answer">It is a long established fact that a reader will be...</div>

@@ -139,3 +139,7 @@
     height: 7.33vh;
     cursor: pointer;
   }
+  
+  .hidden {
+    display: none;
+}
